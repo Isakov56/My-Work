@@ -1,0 +1,273 @@
+<html>
+<!--
+        You have been assigned to the creation of a Smartphone Shop Website.
+        The shop is just a showcase of the products of the shop with some extra informations.
+        No shopping cart / checkout features are required.
+        EX1.:
+        Add H1 title with the name of the shop
+        EX2.: 
+        Add a TABLE with the top 5 products of the shop
+        EX3.: 
+        Each product should have one image, title, description and price
+        EX4.:
+        Add Map to the shop 
+        EX5.: 
+        Add the links to Amazon products for each item in the table
+        EX6.:
+        Add a footer with the address and the name of the shop
+        EX7.: 
+        Add a message board where the user can type a message in it (only client side)
+        // EXTRA 
+        EX8.: 
+        Write a function to change the heading text
+        EX9.:
+        Write a function to change the page background color
+        EX10.:
+        Write a function to change the footer address with a fake one
+    -->
+
+<head>
+    <style>
+        .size {
+            width: 100;
+        }
+        #map {
+            margin: 10px;
+            margin-left: 40px;
+        }
+        #text {
+            height: 100px;
+            margin-left: 40px;
+        }
+        .lovelyButtons {
+            margin: 10px;
+            margin-left: 40px;
+        }
+        .red-color {
+            background-color: red;
+        }
+
+        
+        
+
+    </style>
+    <title id="realTitle">Super Website</title>
+</head>
+
+<body id="switch" >
+    <h1>
+        eAmazon Express
+    </h1>
+    <section class="main">
+        <h2>Top 5 products</h2>
+        <div id="products">
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td> <a href="">Apple iPhone 11 Pro</a> </td>
+                    <td><img class="size" src="images/MX0H2.jpg" alt=""></td>
+                    <td>Another year, another new flagship phone from Apple, 
+                        <br> this time introducing a new triple camera system, 
+                        <br> night mode and improved battery life.</td>
+                    <td>891.90 €</td>
+                </tr>
+                <tr>
+                    <td> <a href="">Samsung Galaxy S20</a> </td>
+                    <td><img class="size" src="images/samsung-galaxy-s20-ultra-winfuture-2.jpg" alt=""></td>
+                    <td>Safe, reliable and resistant, 
+                        <br> Galaxy S20, S20 + and S20 Ultra are designed 
+                         to always <br> keep the pace of your work with maximum performance</td>
+                    <td>1,007.90 €</td>
+                </tr>
+                <tr>
+                    <td> <a href="">Huawei P40 Pro</a> </td>
+                    <td><img class="size" src="images/P40-Pro.jpg" alt=""></td>
+                    <td>Available in 3 colors inspired 
+                        <br> by the purity of nature</td>
+                    <td>€ 571.00</td>
+                </tr>
+                <tr>
+                    <td> <a href="">Huawei P40 Pro</a> </td>
+                    <td><img class="size" src="images/xiaomi-mi-note-10-dual-sim-en-verde-de-128gb-y-6gb-ram-detras.jpg" alt=""></td>
+                    <td>Good level Android smartphone, strongly devoted <br> to imaging, 
+                        able to satisfy even the most demanding user</td>
+                    <td>359 €</td>
+                </tr>
+                <tr>
+                    <td><a href="">LG K41S</a></td>
+                    <td><img class="size" src="images/LG-K41S-500x500.jpg" alt=""></td>
+                    <td>Dual SIM smartphone launched in 2020 
+                        <br> based on the Android 10 operating system</td>
+                    <td>159,00 €</td>
+
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section>
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47557.12722284154!2d12.58544817910156!3d41.8429289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1325880ff5b9492d%3A0x3ba77d8955a80d0e!2sMedia%20World!5e0!3m2!1sen!2sit!4v1601912429029!5m2!1sen!2sit" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </section>
+    <section>
+        <div class="input-data">
+            <label for= 'changing to do list' onclick="changeListTitle ()"><button>hello</button></label>
+            <input id="textToDo" type="text">
+        </div>
+    </section>
+    <div class="lovelyButtons">
+        <input type="button" id="colorButton" value="Click to Change Color">
+        <input type="button" id="colorButton1" value="Standart Color">
+        <input type="button" id="newTitle" value="Click to Change Title" onclick="changeTitle ()">
+        <input type="button" id="ChangeP" value="Click to Change Text" onclick="changePContent ()">
+    </div>
+    <footer>
+        <div id="addedCode">
+            <h2 id="listTitle">Todo List</h2>
+          <ul id="firstList">
+              <li><p>1st</p></li>
+              <li>2nd</li>
+              <li>3rd</li>
+          </ul>
+          <ul id="secondList">
+              <li>1st</li>
+              <li>2nd</li>
+              <li>3rd</li>
+          </ul>
+          <div id="realP">
+              <p>This text is just for the exercise</p>
+          </div>
+        </div>
+        
+        <h5>
+            Via Mary Pandolfi de Rinaldis, 30, 00173 Roma RM 
+            <br> eAmazon Express
+        </h5>
+    </footer>
+    <script>
+        let colors = ['blue', 'red', 'yellow', 'green', 'grey', 'white']
+        let button = document.getElementById('colorButton')
+        button.addEventListener('click', function(){
+            const randomColor = colors[Math.floor(Math.random() * colors.length)]
+            let container = document.getElementById('switch')
+            container.style.background = randomColor
+        })
+
+        let button1 = document.getElementById('colorButton1')
+        button1.addEventListener('click', function(){
+            const whiteColor = colors[5]
+            let container = document.getElementById('switch')
+            container.style.background = whiteColor
+        })
+
+        
+
+        
+
+
+       /*EXERCISE 1 
+     Create a new welcome alert message when the page successfully loads
+    */
+  window.onload = function () {
+      alert("Welcome to Our Website")
+  };
+  /* EXERCISE 2
+      Write a function to change the Title of the page in something else (execute the function in browser console)
+  */
+  const changeTitle = function () {
+      const titlesArray = ["Phone Shop", "Shop Sells Phones", "eAmazon Express"]
+      document.title = titlesArray[Math.floor(Math.random() * titlesArray.length)]
+  };
+  /* EXERCISE 3a
+      Write a function to add a class to the page's h1 title in "red-color" (execute the function when title is hovered by mouse).
+  */
+        const addClassToTitle = function () {
+        let h1Title = document.querySelector("h1")
+        h1Title.classList.add("asdf")
+        }
+      
+      
+  
+  /* EXERCISE 3b
+      Write a function to remove "red-color" class from previous h1 (execute the function when the mouse leaves the title).
+  */
+  const removeClassFromTitle = function () {
+     
+  };
+  /* EXERCISE 4
+      Add the following html snippet to your page:
+          <h2 id="listTitle">Todo List</h2>
+          <ul id="firstList">
+              <li><p>1st</p></li>
+              <li>2nd</li>
+              <li>3rd</li>
+          </ul>
+          <ul id="secondList">
+              <li>1st</li>
+              <li>2nd</li>
+              <li>3rd</li>
+          </ul>
+          <div>
+              <p>This text is just for the exercise</p>
+          </div>
+  Write a function to change the text of only the p which are child of a div (execute the function by assigning it to a button's click event)
+  */
+    const changePContent = function () {
+    const p = document.getElementById('realP')
+    p.innerText = p.textContent = 'Here is our new text and bla bla'
+     };
+  /* EXERCISE 5
+      Write a function to change the list title (you can use previous day's textarea as input or create a new text input field to grab the content)
+  */
+    const changeListTitle = function (content) {
+        let textInput = document.querySelector('#textToDo')
+        let listTitleChange = document.getElementById('listTitle')
+        listTitleChange.innerText = listTitleChange.textContent = textInput.value;
+    };
+  /* EXERCISE 6
+       Write a function to add a new item ONLY to the second list (create an input field + add button)
+  */
+  const addToTheSecond = function (content) {};
+  /* EXERCISE 7
+      Write a function to make the first UL disappear (button)
+  */
+  const firstUlDisappear = function () {};
+  /* EXERCISE 8
+      Write a function to make the background of every UL green (button)
+  */
+  const paintItGreen = function () {};
+
+  /* EXERCISE 9
+      Add a "magnifier function" to the table.
+      When the user mouse goes on a table cell (not the image one) the font size must increase.
+      HINT use mouseenter / mouseleave events
+  */
+  const makeThemMagnifiable = function () {};
+  /* EXERCISE 10
+      Add a button to toggle all the product images (toggle => if visible, hide, if not visible, show)
+  */
+  const toggleShowImages = function () {};
+
+  //##### EXTRA
+
+  /* EXERCISE 11
+      Make the heading of the page change color radomly every time the user clicks on it
+      */
+  const makeItClickable = function () {};
+
+  /*EXERCISE 12
+    Refactor your HTML code with HTML5 semantic tags such as header, section, footer, etc
+*/
+
+    
+
+    </script>
+</body>
+
+</html>
+

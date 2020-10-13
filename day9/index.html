@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+ <html>
+   <!--
+         BINGO CHALLENGE!!!
+         Create programmatically (with JS) a BINGO board with 76 cells, from 1 to 76.
+         Create a button to randomize a number from 1 to 76. The same number should be highlighted on the bingo board
+
+         EXTRA: 
+         - Take ALWAYS a new number (avoid randoming 10 3 times for example)
+         - Create a USER BOARD with random 24 numbers that highlights as the main board does
+         - Let the user choose HOW MANY user boards he's willing to play with and create them.
+     -->
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>BINGO</title>
+       <style>
+           h1 {
+              font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              margin: 1px;
+              font-size: 50px;
+              color: red;
+               
+           }
+           
+           #container {
+        background-color: #1b1b1b;
+        color: white;
+        width: 100%;
+        margin-bottom: 5px;
+        border: 6px solid orange;
+        border-radius: 8px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+
+      .childDiv {
+        display: inline-block;
+        width: 6.2%;
+        text-align: center;
+        min-height: 5px;
+        border: 1px solid transparent;
+      }
+      .childDiv h3 {
+        font-weight: 300;
+        font-size: 26px;
+        margin: 1px;
+        padding: 1px;
+      }
+
+
+       </style>
+   </head>
+   <body>
+       <h1>Bingo</h1>
+       <div id="container"></div>
+       <input type="button" id="rindomizer" value="Tap to Randomize Numbers">
+       <script>
+          
+           
+           window.onload = function () {
+            
+            for (let i = 0;  i< 77; i++) {
+                const parentDiv = document.getElementById("container")
+                const childDivs = document.createElement("div")
+                childDivs.className = "childDiv"
+                const childDivH3s = document.createElement("h3")
+                childDivH3s.innerText = i+1
+                childDivs.appendChild(childDivH3s)
+                parentDiv.appendChild(childDivs)
+                console.log(childDivs)
+            }
+           }
+           const randomizeNumbers = function (){
+               const button = document.getElementById("randomizer")
+
+
+           }
+           
+       </script>
+
+   </body>
+ </html>
