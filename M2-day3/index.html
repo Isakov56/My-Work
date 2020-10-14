@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+        ASSIGNMENT RULES
+        - This is exercise should be done in couples
+        - Implement one exercise each
+        - We suggest you to use Zoom or Google Hangouts to speak to each other
+        - The solution must be pushed to the repository and be available for the tutors by the end of the day
+        - You can ask for tutor's help
+        - You can google / use StackOverflow BUT we suggest you to use just the material provided
+        - To test the page, just open it with your default browser.
+        - Use Bootstrap4 classes to render the page.
+        - Use correctly containers and rows in order to have a great display
+        You are implementing a website for a Travel Agency.
+        In the page you can add all the destination you'd like to go in the next future!
+        Ex 1) Implement a navigation bar, connected to all the sections of the page. 
+        Ex 2) Add a logo into the navigation bar 
+        Ex 3) Add a Jumbotron section in which you present name and claim of the tour operator
+        Ex 4) Implement the "Deal of the Week" section. In this section you'll display 4 destinations.
+         In this section you should have:
+            - 4 destinations per row when the screen is very large
+            - 3 destinations per row when you are on a tablet (or a smaller window)
+            - 2 destinations per row when you are on a small screen
+        Ex 5) Implement the "Welcome Summer" section. In this section you'll propose 6 destinations
+            In this section you should have:
+                - 6 destinations per row when the screen is very large
+                - 3 destinations per row when you are on a tablet (or a smaller window)
+                - 2 destinations per row when you are on a small screen
+        
+        Ex 6) Implement a "Deal of the day" section. In this section you'll have:
+            - 66% of the page with a picture of the destination
+            - 33% with Name, dates, price and a short description
+        Ex 7) Make the "Deal of the day" section disappear when the user is mobile
+        Ex 8) Add to the Welcome Summer destinations a large shadow
+        Ex 9) Create a section Last Minute, in which you'll display the pictures from the destinations as Cards
+        Ex 10) Create a "Testimonial" section, in which the user can find several feedback from fake customers
+        Ex 11) Create a footer with the company information and a button "contact us"
+        Ex 11) Create a button next to each section to collapse and reopen the given section
+        Ex 12) Create a method that counts the number of "travels" on the page
+        Ex 13) Create a modal view with a message and a email field
+        Ex 14) When the user clicks on "contact us" the modal is displayed
+        Ex 15) Create a function that adds a "HOT" badge to all the "Welcome Summer" offers
+        Ex 16) Create a function to delete all "cards" from the page
+      -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <style>
+      header {
+        background-position: center;
+        background-size: cover;
+
+        background-image: url("https://images.unsplash.com/photo-1483450388369-9ed95738483c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+        background-color: #000000;
+        background-repeat: no-repeat;
+        height: 50vh;
+      }
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 50vh;
+      }
+    </style>
+    <title>Travel Agency</title>
+  </head>
+  <body></body>
+  <body>
+    <header>
+      <div class="overlay">
+        <div class="bg-primary py-1 text-light text-center">
+          Tis the season of curiority: Give the gift of curiosity with a
+          <span class="font-weight-bold">CONTEXT GIFT CARD</span>
+        </div>
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4">
+            <a class="navbar-brand font-weight-bold text-light" href="#"
+              >Travel Agency</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-light"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Cities
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-light" href="#">Los Angelos</a>
+                    <a class="dropdown-item text-light" href="#">Rome</a>
+                    <a class="dropdown-item text-light" href="#">Paris</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-light"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Interest
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-light" href="#">Vacation</a>
+                    <a class="dropdown-item text-light" href="#">Swimming</a>
+                    <a class="dropdown-item text-light" href="#">Travelling</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light"> Last Minute Tours </a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input
+                  class="form-control mr-sm-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button
+                  class="btn btn-outline-primary my-2 my-sm-0"
+                  type="submit"
+                >
+                  Search
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
+        <hr class="my-0" />
+        <div class="row" style="height: 25vh">
+          <h1 class="text-light m-auto">
+            Scholarly Tours for Curious Travelers
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
