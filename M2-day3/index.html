@@ -72,6 +72,49 @@
         background-color: rgba(0, 0, 0, 0.5);
         height: 50vh;
       }
+      .week img {
+          width: 18rem;
+          height: 12rem;
+      }
+      .summer img {
+          width: 8rem;
+          height: 4rem;
+      }
+      .image {
+          position: relative;
+      }
+      .image-overlay {
+          position: absolute;
+          top: 0;
+          left: 1;
+          width: 18rem;
+          height: 12rem;
+          background: rgba(0, 0, 0, 0.6);
+          color: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-items: center;
+          opacity: 0;
+      }
+     
+      .image-overlay:hover {
+          opacity: 1;
+      }
+      .image-title {
+          font-size: 1.8em;
+          font-weight: bold;
+      }
+      .image-title-section2 {
+          font-size: 1em;
+          font-weight: bold;
+      }
+      .image-discription {
+          font-size: 0.90em;
+          margin-left: 0.40em;
+
+      }
+
     </style>
     <title>Travel Agency</title>
   </head>
@@ -115,9 +158,9 @@
                     Cities
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-light" href="#">Los Angelos</a>
-                    <a class="dropdown-item text-light" href="#">Rome</a>
-                    <a class="dropdown-item text-light" href="#">Paris</a>
+                    <a class="dropdown-item text-dark" href="#">Los Angelos</a>
+                    <a class="dropdown-item text-dark" href="#">Rome</a>
+                    <a class="dropdown-item text-dark" href="#">Paris</a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -133,9 +176,9 @@
                     Interest
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-light" href="#">Vacation</a>
-                    <a class="dropdown-item text-light" href="#">Swimming</a>
-                    <a class="dropdown-item text-light" href="#">Travelling</a>
+                    <a class="dropdown-item text-dark" href="#">Vacation</a>
+                    <a class="dropdown-item text-dark" href="#">Swimming</a>
+                    <a class="dropdown-item text-dark" href="#">Travelling</a>
                   </div>
                 </li>
                 <li class="nav-item">
@@ -150,7 +193,7 @@
                   aria-label="Search"
                 />
                 <button
-                  class="btn btn-outline-primary my-2 my-sm-0"
+                  class="btn btn-outline-light my-2 my-sm-0"
                   type="submit"
                 >
                   Search
@@ -167,6 +210,118 @@
         </div>
       </div>
     </header>
+    <section class="dealWeek mx-3">
+        <div><h2 class="ml-5 my-2">Deals of the Week:</h2></div>
+        <div class="week image row">
+            <div class="col-sm my-2">
+                <img src="images/amsterdam1.jpg" alt="">
+                <div class="image-overlay">
+                    <div class="image-title">Amsterdam</div>
+                    <div class="image-discription">is the largest city in Italy and with its 2,500 years of history and innumerable archaeological sites, art museums, churches, and ruins</div>
+                </div>
+            </div>
+            <div class="col-sm my-2">
+                <img src="images/Rome.jpg" alt="">
+                <div class="image-overlay">
+                    <div class="image-title">Rome</div>
+                    <div class="image-discription">is the largest city in Italy and with its 2,500 years of history and innumerable archaeological sites, art museums, churches, and ruins</div>
+                </div>
+            </div>
+            <div class="col-sm my-2">
+                <img src="images/zurich.jpg" alt="">
+                <div class="image-overlay">
+                    <div class="image-title">Zurich</div>
+                    <div class="image-discription">he views of the mountains are breathtaking, and there are adorable cafes to grab a bite to eat and enjoy a delicious cappuccino</div>
+                </div>
+            </div>
+            <div class="col-sm my-2">
+                <img src="images/photo-1559113202-c916b8e44373.jpg" alt="">
+                <div class="image-overlay">
+                    <div class="image-title">Brussels</div>
+                    <div class="image-discription">he capital is the most visited Belgian destination and no wonder since it is full of great museums, palaces, chapels, and mansions</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="welcomeSummer mx-3">
+        <div><h2 class="ml-5 my-2">Welcome Summer:</h2></div>
+        <div class="summer image row">
+            <div class="col-sm my-2">
+                <img src="images/amsterdam1.jpg" alt="">
+                <div class="image-overlay-section2">
+                    <div class="image-title-section2">Amsterdam</div>
+                    <div class="image-discription">
+                        <div>Price: 300$</div>
+                        <div>Duration: 7 days</div>
+                        <div>Place to stay: Included</div>
+                        <div>Food: Not included</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm my-2">
+                <img src="images/amsterdam1.jpg" alt="">
+                <div class="image-overlay-section2">
+                    <div class="image-title-section2">Amsterdam</div>
+                    <div class="image-discription">
+                        <div>Price: 300$</div>
+                        <div>Duration: 7 days</div>
+                        <div>Place to stay: Included</div>
+                        <div>Food: Not included</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm my-2">
+                <img src="images/amsterdam1.jpg" alt="">
+                <div class="image-overlay-section2">
+                    <div class="image-title-section2">Amsterdam</div>
+                    <div class="image-discription">
+                        <div>Price: 300$</div>
+                        <div>Duration: 7 days</div>
+                        <div>Place to stay: Included</div>
+                        <div>Food: Not included</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm my-2">
+                <img src="images/amsterdam1.jpg" alt="">
+                <div class="image-overlay-section2">
+                    <div class="image-title-section2">Amsterdam</div>
+                    <div class="image-discription">
+                        <div>Price: 300$</div>
+                        <div>Duration: 7 days</div>
+                        <div>Place to stay: Included</div>
+                        <div>Food: Not included</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm my-2">
+                <img src="images/amsterdam1.jpg" alt="">
+                <div class="image-overlay-section2">
+                    <div class="image-title-section2">Amsterdam</div>
+                    <div class="image-discription">
+                        <div>Price: 300$</div>
+                        <div>Duration: 7 days</div>
+                        <div>Place to stay: Included</div>
+                        <div>Food: Not included</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm my-2">
+                <img src="images/amsterdam1.jpg" alt="">
+                <div class="image-overlay-section2">
+                    <div class="image-title-section2">Amsterdam</div>
+                    <div class="image-discription">
+                        <div>Price: 300$</div>
+                        <div>Duration: 7 days</div>
+                        <div>Place to stay: Included</div>
+                        <div>Food: Not included</div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
