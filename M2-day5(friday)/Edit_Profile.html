@@ -1,0 +1,234 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Striveflix</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        body,
+        html {
+            background: #141414;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        img {
+            width: 80;
+            height: 30;
+
+        }
+
+        .centerpiece {
+            margin-top: 0%;
+            margin-bottom: 0%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #logo {
+            width: 120px;
+            background: #141414;
+            position: relative;
+            /* height: 222px; */
+        }
+
+        h1 {
+            display: block;
+            font-size: 40px;
+            font-weight: 400;
+            margin: 0;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            /*border-bottom: 1px  solid grey;*/
+        }
+
+        hr {
+            border-bottom: 1px solid grey;
+        }
+
+        .main {
+            text-align: left;
+            position: relative;
+        }
+
+        #strive_logo {
+            width: 80px;
+            height: 80px;
+        }
+
+        input[type=text] {
+            width: 18em;
+            height: 2em;
+            background: #666;
+            border: 1px solid transparent;
+            margin: 0 .8em 0 0;
+            padding: .2em .6em;
+            color: #fff;
+            box-sizing: border-box;
+            text-indent: .1vw;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 13px;
+        }
+
+        #maturity {
+            border: 1px solid rgba(100%, 100%, 100%, 0.7);
+            padding: 0.3rem 0.4rem;
+            text-decoration: none;
+            border-color: rgba(100%, 100%, 100%, 1);
+            display: block;
+            margin-top: 1rem;
+        }
+
+        a {
+            color: rgba(100%, 100%, 100%, 1);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        a:hover {
+            color: rgba(100%, 100%, 100%, 0.7);
+        }
+
+
+        label {
+            font-weight: 400;
+            font-size: 13px;
+            display: inline-block;
+        }
+
+        input[type=checkbox] {
+            display: inline-block;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" id="logo" />
+        </div>
+    </div>
+
+
+    <div class="centerpiece" style="max-width: 600px;">
+
+        <div class="row main">
+            <h1>Edit Profile</h1>
+            <hr>
+        </div>
+        <div class="row mb-5">
+
+            <div class="col">
+                <img class="img-fluid rounded" id="strive_logo" src="https://strive.school/assets/strive_logo02.png" />
+            </div>
+            <div class="col">
+                <input type="text" class="mb-3" placeholder="Name" value="">
+                <h2 class="profileDropDown-label">Language:</h2>
+                <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle" type="button"
+                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        English </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item"
+                            href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a
+                            class="dropdown-item" href="#">Italiano</a> </div>
+                </div>
+                <!-- <span class="arrow"></span>
+                <div class="label" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false"><a
+                        class="user-lang-link" tabindex="0" role="link">English</a><span class="arrow"></span></div> -->
+                <hr>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col">
+
+            </div>
+
+            <div class="col">
+                <h2 class="age">Maturity Settings</h2>
+                <a class="mb-5" id="maturity" href="#">All Maturity Ratings</a>
+                <h2>Show titles for all maturity ratings for this site</h2>
+                <a id="maturity" href="#">EDIT</a>
+
+            </div>
+
+            <hr>
+        </div>
+        <div class="row mb-5">
+            <div class="col">
+
+            </div>
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <h2 class="profile-entry-header">Autoplay Controls</h2>
+                <input type="checkbox" id="autoplay" name="autoplay" value="Bike">
+                <label for="autoplay"> Autoplay next
+                    episode in a serie on all devices.
+                </label><br>
+                <input type="checkbox" id="autoplay" name="autoplay" value="Bike">
+                <label for="autoplay"> Autoplay
+                    previews while
+                    browsing on all devices.
+                </label><br>
+            </div>
+            <div class="col">
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col">
+
+                <a id="maturity" href="#">SAVE</a>
+
+            </div>
+            <div class="col">
+                <a id="maturity" href="#">CANCEL</a>
+
+            </div>
+
+            <div class="col">
+                <a id="maturity" href="#">DELETE PROFILE</a>
+
+            </div>
+            <hr>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

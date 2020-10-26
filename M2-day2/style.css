@@ -1,0 +1,70 @@
+.navbar-nav {
+    font-size: 2rem;
+}
+section .container.main img.album {
+  width: 319px;
+}
+section .container.main img.icon {
+  width: 25px;
+  height: 25px;
+}
+section .container.main .container.up p {
+ font-size: 14px;
+ margin-bottom: 5px;
+ 
+}
+section .container.main .container.down p {
+ font-size: 12px;
+ margin-top: auto;
+ margin-bottom: auto;
+}
+section .container.main .al {
+  width: 320px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+.al {
+  border: 1px solid;
+  border-color: thistle;
+}
+
+section.second div.card-body {
+    padding: 0.25rem 0.8rem;
+}
+
+section.second div.card-body div.d-flex.justify-content-between p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+section.second div.card div.card-footer img{
+    width: 1.5rem;
+    height: 1.5rem;
+} 
+
+section.second div.card div.card-footer {
+    padding: 0;
+    padding-top: 0.8rem;
+    padding-left: 0.8rem;
+    padding-bottom: 0.6rem;
+}
+
+section.second div.card div.card-footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+h3 {
+    margin: 3rem 0 !important;
+}
+
+section.second div.container div.card.col {
+    padding: 0;
+    margin-right: 0.5rem !important;
+    margin: 0 !important;
+}
