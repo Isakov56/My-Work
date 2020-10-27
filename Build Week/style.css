@@ -75,6 +75,62 @@ hr {
     font-size: 12px !important;
 }
 
+/* ************* player *************** */
+
+div.player .left {
+    align-items: center;
+}
+
+div.player {
+    height: 4rem;
+    background-color: rgb(44, 43, 43);
+}
+
+div.player img:nth-of-type(1){
+    margin: 0.5rem;
+    width: 3rem;
+}
+
+div.player p:nth-of-type(1){
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+}
+
+div.player p:nth-of-type(2){
+    color: whitesmoke;
+    font-size: 11px;
+    margin: 0;
+}
+
+div.player svg:nth-of-type(1){
+   width: 1rem;
+   margin-left: 1rem;
+   margin-right: 0.4rem;
+}
+
+div.player svg:nth-of-type(2){
+    width: 1rem;
+    margin-left: 0.4rem;
+}
+
+.player div.right button{
+    margin: 0;
+    padding: 0;
+}
+
+.player div.middle button{
+    margin: 0.3rem 1rem;
+    padding: 0;
+}
+
+.player{
+    margin-top: 1rem;
+}
+
+
+
 
 
 /* h6{
