@@ -8,14 +8,14 @@ main {
 }
 
 nav a {
-    color: thistle;
+    color: rgb(220, 220, 220);
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
 }
 
 nav a:hover {
-    color: rgb(240, 240, 240);
+    color: white;
 }
 
 .active {
@@ -41,10 +41,23 @@ div.cards div.card p {
     margin: 0.5rem 0 !important; 
     font-size: 14px;
     font-weight: 600;
+    margin-top: 1rem;
 }
 
 div.cards div.card img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.row div.col + div.card + img {
+    position: absolute;
+}
+
+div.row div.col + div.card + svg {
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
 }
 
 main div.cards .card {
@@ -54,6 +67,8 @@ main div.cards .card {
     border: none;
     width: 10rem;
 }
+
+
 
 h3{
     color: whitesmoke;
