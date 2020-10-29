@@ -1,0 +1,204 @@
+/* ALBUM-------------------------------------------------------------------------------------------------------- */
+
+#page-content{
+    width: calc(100%-220px);
+    height: 100%;
+    margin-left: 220px;
+    padding-bottom: 4rem;
+    overflow: hidden;
+    
+}
+
+.album-page{/*SLIDER*/
+    width: 100%;
+    height: 100%;
+}
+
+.row.album{/*SINGLE ALBUM*/
+    width: 100%;
+    height: 100%;
+}
+
+/*ALBUM OVERVIEW*/
+
+.album-overview{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: white;
+    padding: 20px;
+    padding-left: 10%;
+    text-align: center;
+}
+
+.album-overview > div, input{
+    margin: 10px;
+}
+
+.album-overview p{
+    font-size: small;
+    color: rgba(255, 255, 255, 0.5);
+}
+.album-overview .img-album{
+    position: relative;
+}
+.album-overview .img-album i{
+    font-size: xx-large;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.album-overview #play{
+    padding: 10px;
+    width: 100px;
+    border-radius: 40px;
+    border: none;
+    background-color: #1db954;
+    color: #ffffff;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.album-overview .album-options i{
+    margin: 5px;
+    cursor: pointer;
+}
+.album-options .like{
+    position: relative;
+}
+.album-options .like .fas{
+    position: absolute;
+    margin-left: -84%;
+    opacity: 0;
+}
+
+.album-options p{
+    width: 80%;
+    display: none;
+    z-index: 10;
+    margin-top: -45%;
+    margin-left: 5%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 2px;
+    background-color: #040404;
+}
+
+/*SAVE OPTIONS*/
+.save-album-options{
+    position: relative;
+}
+
+.save-album-options ul{
+    list-style: none;
+    text-align: left;
+    position: relative;
+    left: 50%;
+    border: rgba(255, 255, 255, 0.5) solid 1px;
+    width: 100px;
+    font-size: small;
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 0;
+    margin-left: -20px;
+}
+
+.save-album-options ul li{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.save-album-options ul li:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#play:hover{
+    animation: shining-card 1s infinite;
+    background-color: #03bb44;
+}
+
+
+/*ALBUM TRACKS*/
+
+.album-track-list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: #ffffff;
+    padding: 20px;
+
+}
+
+.album-track{
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.album-track:hover{
+    animation: blinking-text 1.5s infinite;
+}
+
+.title{
+    display: flex;
+    overflow: auto;
+}
+
+.title i{
+    align-self: center;
+}
+
+.title-artist{
+    margin-left: 10px;
+}
+
+.title-artist h6, p{
+    margin: 0;
+}
+
+.title-song{
+    display: flex;
+}
+
+.title-song{
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.title-artist p{
+    font-size: smaller;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/*MODAL Style*/
+
+.modal-dialog, .modal-dialog >*{
+    color: black;
+}
+
+.modal-body ul{
+    text-align: left;
+}
+
+.modal-body ul li{
+    margin-top: 4px;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.modal-body ul li:hover{
+    background-color: rgba(0, 0, 0, 0.205);
+    animation: bouncing-card .8s infinite, text-blink .8s infinite;
+}
+
+@keyframes text-blink{
+    0%{color: black;}
+    50%{color:#1db954;}
+    100%{color: black;}
+}
+

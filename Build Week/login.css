@@ -1,0 +1,87 @@
+.logo img{
+    margin-right: 0.5rem;
+    width: 3.5rem;
+
+}
+
+h1 {
+    letter-spacing: -1.5px;
+    font-weight: 800;
+}
+
+.logo {
+    margin-top: 1.5rem;
+}
+
+hr {
+    margin: 1.5rem 0;
+}
+
+.main button {
+    border-radius: 35px;
+    margin: 0.3rem 0;
+    height: 2.5rem;
+}
+
+.main .social-btn:nth-of-type(1){
+    background-color: steelblue;
+
+}
+
+.main .social-btn:nth-of-type(2){
+    background-color: rgb(136, 123, 123);
+
+}
+
+.main{
+    width: 30rem;
+}
+
+.main button p{
+    margin-left: 0.5rem;
+    text-transform: uppercase;
+    font-size: large;
+    color: whitesmoke;
+}
+
+.main div:nth-of-type(1){
+    align-items: center;
+}
+
+.main div:nth-of-type(1) p{
+    margin-bottom: 0;
+}
+
+.main .log-in button{
+    width: 14rem;
+    color: white;
+    font-weight: 800;
+    font-size: large;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    height: 2.5rem;
+}
+
+.main button:nth-of-type(3){
+    color: rgb(75, 73, 75);
+    border: 1px solid;
+    border-radius: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.main div:nth-of-type(5){
+    font-size: 12px !important;
+}
+
+.modal-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-body input{
+    width: 50%;
+}

@@ -44,31 +44,63 @@ div.cards div.card p {
     margin-top: 1rem;
 }
 
-div.cards div.card img {
+div.cards div.card img:nth-of-type(1) {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-div.row div.col + div.card + img {
-    position: absolute;
+div.row div.col div.card img:nth-last-of-type(1) {
+    position: relative;
 }
 
-div.row div.col + div.card + svg {
-    position: relative;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
+div.row div.col div.card button{
+    position: absolute;
+    background: none;
+    border: none;
+    left: 30%;
+    top: 30%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+div.row div.col div.card button i.fas {
+    color: rgba(255, 255, 255, 0.727);
+    font-size: 3rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+div.row div.col div.card button.shade i.fas {
+    color: rgba(16, 16, 16, 0.823);
+    font-size: 3rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+
+
+div.row div.col div.card button i.fas:hover{
+    box-shadow: 0 4px 60px 0 rgba(253, 253, 253, 0.844), 0 4px 60px 0 rgba(253, 253, 253, 0.665);
+    transition: 0.3s;
+}
+
+div.row div.col div.card button.shade i.fas:hover{
+    box-shadow: 0 4px 80px 0 rgba(9, 9, 9, 0.953), 0 4px 80px 0 rgba(10, 10, 10, 0.926);
+    transition: 0.3s;
+
+}
+
+
+
+div.row div.col div.card:hover button{
+    opacity: 1;
 }
 
 main div.cards .card {
-    
     margin: 1rem 0.3rem;
     background: transparent !important;
     border: none;
     width: 10rem;
 }
-
-
 
 h3{
     color: whitesmoke;
@@ -76,5 +108,353 @@ h3{
     font-weight: 700;
     margin-top: 2rem;
     font-size: 25px;
+}
 
+.cards-down div.card{
+    margin: 1rem 0.3rem;
+    background: transparent !important;
+    border: none;
+    width: 10rem;
+    color: whitesmoke;
+}
+
+.cards-down div.card img:nth-of-type(1){
+    position: relative;
+}
+
+.cards-down div.card .italy50{
+    position: absolute;
+    width: 100%;
+    height: 74%;
+    background: rgb(28,64,101);
+    background: linear-gradient(0deg, rgba(28,64,101,1) 47%, rgba(12,98,125,1) 100%);; 
+    opacity: 0;  
+}
+
+.cards-down div.card .italy50:hover {
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.cards-down div.card .italy50 p:nth-of-type(1){
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.cards-down div.card .fab {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.4rem;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.398);
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.cards-down div.card:hover .fab {
+    opacity: 1;   
+}
+
+.cards-down div.card .global50 {
+    background: rgb(28,66,101);
+    background: linear-gradient(0deg, rgba(28,66,101,1) 45%, rgba(53,133,124,1) 100%);
+}
+
+.cards-down div.card:hover .viral50-g {
+    width: 100%;
+    height: 37%;
+    background: rgba(28, 206, 114, 0.844);
+    opacity: 1; 
+    transition: 0.3s;
+}
+
+.cards-down div.card:hover .viral50-g-down {
+    margin-top: 80px;
+    height: 37%;
+    background: rgba(112, 61, 112, 0.85) !important;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.cards-down div.card .viral50-g-down p {
+    margin-top: 0.5rem; 
+    margin-bottom: 0.6rem !important; 
+    color: rgba(255, 255, 255, 0.802);
+    font-size: 10px !important;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px !important;
+}
+
+.cards-down div.card:hover .viral50-g-down.italy{
+    background: rgba(41, 55, 135, 0.878) !important;
+}
+
+.cards-down div.card:hover .viral50-g.italy{
+    background: rgba(199, 33, 50, 0.857);
+}
+
+.cards-down .card img {
+    width: 10rem !important;
+}
+
+/* ************************Side Bar*********************** */main {
+    background: rgb(55,99,131);
+    background: linear-gradient(90deg, rgba(55,99,131,1) 0%, rgba(33,50,83,1) 47%, rgba(8,14,23,1) 100%);
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+nav a {
+    color: thistle;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: rgb(240, 240, 240);
+}
+
+.active {
+    border-bottom: 1px red solid;
+}
+
+#spotify-side-nav{
+    width: 200px;
+    height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    background-color:#040404;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+}
+
+#spotify-side-nav .nav-title{
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: baseline;
+    padding: 20px;
+    color: white;
+    background-color:#040404;
+}
+
+#spotify-side-nav .nav-title h3{
+    margin-left: 2px;
+    font-size: 1.3rem;
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px 0;
+}
+
+#spotify-side-nav ol{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color:#040404;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+}
+
+#spotify-side-nav ol li{
+    border-radius: 5px;
+    padding: 4px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+    
+}
+
+#spotify-side-nav ol li:hover {
+    border-left: 3px solid #1db954;
+    transition: border-left .1s ease;
+}
+
+
+
+#spotify-side-nav ol li i, ion-icon{
+    font-size: small;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#spotify-side-nav ol li a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#spotify-side-nav ol li:hover > a, #spotify-side-nav ol li i, ion-icon{
+    color: white;
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.user .user-image{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px white solid;
+}
+
+.user .user-image img{
+    width: 30px;
+    height: 30px;
+}
+
+.user a{
+    font-size: 1rem;
+    color: #ffffff;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+#toggler-side-nav{
+    color: white;
+    width: 20px;
+    height: 60px;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #040404;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 3px;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    display: none;
+}
+
+/* ********************* Footer ********************* */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+div.player .left {
+    align-items: center;
+}
+
+div.player {
+    height: 4rem;
+    background-color: rgb(44, 43, 43);
+}
+
+div.player img:nth-of-type(1){
+    margin: 0.5rem;
+    width: 3rem;
+}
+
+div.player p:nth-of-type(1){
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+}
+
+div.player p:nth-of-type(2){
+    color: whitesmoke;
+    font-size: 11px;
+    margin: 0;
+}
+
+div.player svg:nth-of-type(1){
+   width: 1rem;
+   margin-left: 1rem;
+   margin-right: 0.4rem;
+}
+
+div.player svg:nth-of-type(2){
+    width: 1rem;
+    margin-left: 0.4rem;
+}
+
+.player div.right button{
+    margin: 0;
+    padding: 0;
+}
+
+.player div.middle button{
+    margin: 0.3rem 1rem;
+    padding: 0;
+}
+
+.player{
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 595px){
+    .title-album > *{
+        font-size: 1rem;
+    }
+    .title-song h6{
+        font-size: smaller;
+    }
+    #page-content{
+        margin-left: 100px;
+        padding-left: 100px;
+    }
+
+    .row.album{
+        pointer-events: none;
+    }
+
+    body, #spotify-side-nav{
+        margin-left: -200px;
+    }
+    footer{
+        margin-left: 200px;
+    }
+    #toggler-side-nav{
+        display: block;
+    }
+    .centered{
+        font-size: small;
+        white-space: nowrap;
+    }
+}
+@media only screen and (max-width: 1028px){
+    div.left{
+        display: none !important;
+    }
+    div.right{
+        display: none !important;
+    }
+    div.middle{
+        margin-left: 10rem !important;
+    }
+}
+@media only screen and (max-width: 796px){
+    div.middle{
+        margin-left: 3rem !important;
+    }
+}
+@media only screen and (max-width: 664px){
+    div.middle{
+        width: 25rem;
+    }
+}
+@media only screen and (max-width: 512px){
+    div.middle{
+        width: 19rem;
+    }
 }
