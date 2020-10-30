@@ -4,71 +4,120 @@
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
 
-    <title>Spotify</title>
+    <title>Home</title>
+    <script src="https://kit.fontawesome.com/6d3b43cb55.js" crossorigin="anonymous"></script>
   </head>
   <body>
-      <div class="container">
-      <div class="logo d-flex justify-content-center">
-        <img src="https://img.icons8.com/metro/104/000000/spotify.png"/>
-        <h1>Spotify</h1>
-      </div>
-      <hr>
-      <div class="main container d-flex flex-column justify-content-center">
-        <h6 class="text-center">To continue, login to Spotify.</h6>
-        <button type="button" class="btn d-flex justify-content-center">
-                <img src="https://img.icons8.com/android/24/000000/facebook-new.png"/>
-                <p class="">Continue with facebook</p>
-        </button>
-        <button type="button" class="btn d-flex justify-content-center">
-            <img src="https://img.icons8.com/fluent-systems-filled/24/000000/mac-os.png"/>
-            <p>Continue with Apple</p>
-        </button>
-        <div class="d-flex justify-content-between">
-            <div class="container" style="padding-left: 0;"><hr></div>
-            <p>or</p>
-            <div class="container" style="padding-right: 0;"><hr></div>
+    <nav id="spotify-side-nav">
+        <div id="toggler-side-nav" onclick="hide()">
+          <i class="fas fa-caret-right"></i>
         </div>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="email" placeholder="Email address or user name">
-            <div class="input-group-append">
-              <span class="input-group-text">$</span>
+        <div class="nav-title">
+          <i class="fab fa-spotify"></i>
+          <h3>Strive Spotify</h3>
+        </div>
+        <div class="nav-menu">
+          <div class="list">
+            <ol>
+              <li>
+                <i class="fas fa-home"></i>
+                <a href="home.html">Home</a>
+              </li>
+              <li>
+                <i class="fas fa-search"></i>
+                <a href="#">Search</a>
+              </li>
+              <li>
+                <ion-icon name="library-outline"></ion-icon>
+                <a href="library.html">Library</a>
+              </li>
+            </ol>
+          </div>
+          <div class="user">
+            <div class="user-image">
+              <img src="https://placehold.it/30x30" alt="" />
+            </div>
+            <a href="login.html">User name</a>
+          </div>
+        </div>
+    </nav>
+    <main class="main">
+        <nav class="navbar navbar-expand-lg d-flex justify-content-center">
+            <a class="nav-link" href="#" onclick="activeJs()">Trending</a>
+            <a class="nav-link" href="#" onclick="activeJs1()">Podcast</a>
+            <a class="nav-link" href="#" onclick="activeJs2()">Moods and Genres</a>
+            <a class="nav-link" href="#" onclick="activeJs3()">New releases</a>
+            <a class="nav-link" href="#" onclick="activeJs4()">Discover</a>   
+        </nav>
+        <div class="container">
+            <h2>Moods</h2>
+        </div>
+
+        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-5 cards container">
+            <div class="col">
+                <div class="card" style="margin-left: 0 !important; width: 10rem; height: 10rem;">
+                    <img src="images/images.jpg" class="card-img-top" alt="...">
+                    <button type="button">
+                        <i class="fas fa-play-circle"></i>
+                    </button>
+                    
+                    <p class="text-center">Italian Karaoke</p> 
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width:10rem; height: 10rem">
+                    <img src="images/liricisti.jpg" class="card-img-top" alt="...">
+                    <button type="button">
+                        <i class="fas fa-play-circle"></i>
+                    </button>
+                    <p class="text-center">Lyricists</p> 
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width:10rem; height: 10rem">
+                    <img src="images/Freiquent rotation.jpg" class="card-img-top" alt="...">
+                    <button type="button">
+                        <i class="fas fa-play-circle"></i>
+                    </button>
+                    <p class="text-center">Italy's Freiquent Rotation</p> 
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width:10rem; height: 10rem">
+                    <img src="images/00s italia.jpg" class="card-img-top" alt="...">
+                    <button type="button" class="shade">
+                        <i class="fas fa-play-circle"></i>
+                    </button>
+                    <p class="text-center">00s Italy</p> 
+                </div>
             </div>
         </div>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="email" placeholder="Password">
-        </div>
-        <div class="log-in mb-3">
-            <div class="d-flex justify-content-between">
-                <div class="d-flex">
-                    <input type="checkbox" aria-label="Checkbox for following text input" class="mr-1">
-                    <p>Remember me</p>
-                </div>
-                <button type="button" class="btn bg-success">Log in</button>
-            </div>  
-        </div>
-        <a href="#" class="text-success text-center">Forgot your password?</a>
-        <hr>
-        <h5 class="text-center">Don't have an account?</h5>
-        <button type="button" class="btn">Sign up for spotify</button>
-        <hr>
-        <div class="text-center">If you click "Log in with Facebook" and are not Spotify user, you will be rwgistrwd and you agree to Spotify's 
-            <a href="#" class="text-success">Terms and Conditions</a> and 
-            <a href="#" class="text-success">Privacy Policy</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="player d-flex justify-content-between">
+        
+
+        
+
+        
+    </main>
+
+    <footer>
+      <div class="player d-flex justify-content-between fixed-bottom mt-5">
         <div class="left d-flex">
-            <img src="images/81AyAROqAGL._AC_SX466_.jpg" alt="">
+            <img src="./Media/ArtistPage/footer.jpg" alt="">
             <div class="d-flex flex-column">
                 <p>Song For My Father</p>
                 <p>Horace Silver</p>
+          <img src="" alt="" class="track-art">
+          <div class="d-flex flex-column">
+              <p class="track-name"></p>
+              <p class='track-artist'></p>
             </div>
             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="whitesmoke" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
@@ -78,8 +127,7 @@
                 <path d="M8 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5v-3z"/>
             </svg>
         </div>
-
-        <div class="middle d-flex flex-column">
+        <div class="middle d-flex flex-column p-0">
             <div class="d-flex justify-content-center">
                 <button type="button" class="btn" >
                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-shuffle" fill="whitesmoke" xmlns="http://www.w3.org/2000/svg">
@@ -87,40 +135,38 @@
                         <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
                     </svg>
                 </button>
-
                 <button type="button" class="btn">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-skip-start-fill" fill="whitesmoke" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M4.5 3.5A.5.5 0 0 0 4 4v8a.5.5 0 0 0 1 0V4a.5.5 0 0 0-.5-.5z"/>
-                        <path d="M4.903 8.697l6.364 3.692c.54.313 1.232-.066 1.232-.697V4.308c0-.63-.692-1.01-1.232-.696L4.903 7.304a.802.802 0 0 0 0 1.393z"/>
-                    </svg>
+                  <div class="prev-track" onclick="prevTrack()"> 
+                    <i class="fa fa-step-backward fa" style="color:white;"></i> 
+                  </div> 
+                </button>      
+                                                <!-- The player Button -->
+                <button type="button" class="btn">
+                  <div class="playpause-track" onclick="playpauseTrack()"> 
+                    <i class="fa fa-play-circle fa-2x" style="color: white;"></i> 
+                  </div> 
                 </button>
-
+               
                 <button type="button" class="btn">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-play-fill" fill="whitesmoke" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
-                    </svg>
+                  <div class="next-track" onclick="nextTrack()"> 
+                    <i class="fa fa-step-forward fa" style="color: white;"></i> 
+                  </div> 
                 </button>
-
+                
                 <button type="button" class="btn">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-skip-end-fill" fill="whitesmoke" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M12 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
-                    </svg>
-                </button>
-
-                <button type="button" class="btn">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-reply" fill="whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-reply " fill="whitesmoke" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M9.502 5.013a.144.144 0 0 0-.202.134V6.3a.5.5 0 0 1-.5.5c-.667 0-2.013.005-3.3.822-.984.624-1.99 1.76-2.595 3.876C3.925 10.515 5.09 9.982 6.11 9.7a8.741 8.741 0 0 1 1.921-.306 7.403 7.403 0 0 1 .798.008h.013l.005.001h.001L8.8 9.9l.05-.498a.5.5 0 0 1 .45.498v1.153c0 .108.11.176.202.134l3.984-2.933a.494.494 0 0 1 .042-.028.147.147 0 0 0 0-.252.494.494 0 0 1-.042-.028L9.502 5.013zM8.3 10.386a7.745 7.745 0 0 0-1.923.277c-1.326.368-2.896 1.201-3.94 3.08a.5.5 0 0 1-.933-.305c.464-3.71 1.886-5.662 3.46-6.66 1.245-.79 2.527-.942 3.336-.971v-.66a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.667z"/>
                     </svg>
                 </button> 
             </div>
-            <div class="d-flex align-items-center">
-                <p>0:00</p>
-                <div style="width: 30rem; height: 0.3rem; background-color: whitesmoke; margin-right: 0.5rem; margin-left: 0.5rem; border-radius: 5px;"></div>
-                <p>7:18</p>
+            <div class="d-flex align-items-center slider_container">
+              <div class="current-time" style="color: white; margin-left: 5px;">00:00</div> 
+              
+              <input type="range" min="1" max="100"
+              value="0" class="seek_slider" onchange="seekTo()"> 
+                <div class="total-duration" style="color:white;">00:00</div>
             </div>
         </div>
-
         <div class="right d-flex align-items-center">
             <button type="button" class="btn">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-justify-left" fill="whitesmoke" xmlns="http://www.w3.org/2000/svg">
@@ -139,18 +185,13 @@
                     <path d="M10.707 11.182A4.486 4.486 0 0 0 12.025 8a4.486 4.486 0 0 0-1.318-3.182L10 5.525A3.489 3.489 0 0 1 11.025 8c0 .966-.392 1.841-1.025 2.475l.707.707z"/>
                 </svg>
             </button>
-            <div style="width: 5rem; height: 0.3rem; background-color: whitesmoke; margin-right: 0.5rem; margin-left: 0.5rem; border-radius: 5px;"></div>
+            <div class="slider_container"> 
+              <i class="fa fa-volume-down"></i> 
+              <input type="range" min="1" max="100"
+                value="99" class="volume_slider" onchange="setVolume()"> 
+              <i class="fa fa-volume-up"></i> 
+            </div> 
+          </div> 
         </div>
     </div>
-      
-    
-
-    
-
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-    
-  </body>
-</html>
+    </footer>

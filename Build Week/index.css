@@ -1,0 +1,313 @@
+/* 1-------------------------------------------------------------------------------------------------------- */
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #141414;
+    overflow-x: hidden;
+    transition: margin-left 1s ease;
+    
+}
+
+
+/* 2-------------------------------------------------------------------------------------------------------- */
+
+#spotify-side-nav{
+    width: 200px;
+    height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    background-color:#040404;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+}
+
+#spotify-side-nav .nav-title{
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: baseline;
+    padding: 20px;
+    color: white;
+    background-color:#040404;
+}
+
+#spotify-side-nav .nav-title h3{
+    margin-left: 2px;
+    font-size: 1.3rem;
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px 0;
+}
+
+#spotify-side-nav ol{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color:#040404;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+}
+
+#spotify-side-nav ol li{
+    border-radius: 5px;
+    padding: 4px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+    
+}
+
+#spotify-side-nav ol li:hover {
+    border-left: 3px solid #1db954;
+    transition: border-left .1s ease;
+}
+
+
+
+#spotify-side-nav ol li i, ion-icon{
+    font-size: small;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#spotify-side-nav ol li a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#spotify-side-nav ol li:hover > a, #spotify-side-nav ol li i, ion-icon{
+    color: white;
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.user .user-image{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px white solid;
+}
+
+.user .user-image img{
+    width: 30px;
+    height: 30px;
+}
+
+.user a{
+    font-size: 1rem;
+    color: #ffffff;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+#toggler-side-nav{
+    color: white;
+    width: 20px;
+    height: 60px;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #040404;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 3px;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    display: none;
+}
+
+/* PLAYER-------------------------------------------------------------------------------------------------------- */
+/* ** player ** */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+div.player .left {
+    align-items: center;
+}
+
+div.player {
+    height: 4rem;
+    background-color: rgb(44, 43, 43);
+}
+
+div.player img:nth-of-type(1){
+    margin: 0.5rem;
+    width: 3rem;
+}
+
+div.player p:nth-of-type(1){
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+}
+
+div.player p:nth-of-type(2){
+    color: whitesmoke;
+    font-size: 11px;
+    margin: 0;
+}
+
+div.player svg:nth-of-type(1){
+   width: 1rem;
+   margin-left: 1rem;
+   margin-right: 0.4rem;
+}
+
+div.player svg:nth-of-type(2){
+    width: 1rem;
+    margin-left: 0.4rem;
+}
+
+.player div.right button{
+    margin: 0;
+    padding: 0;
+}
+
+.player div.middle button{
+    margin: 0.3rem 1rem;
+    padding: 0;
+}
+
+.player{
+    margin-top: 1rem;
+}
+
+/* ANIMATION-------------------------------------------------------------------------------------------------------- */
+@keyframes bouncing-card{
+    0%{
+        margin: 0px;
+    }
+    50%{
+        margin-top: 10px;
+
+    }
+    100%{
+        margin: 0;
+    }
+}
+
+@keyframes shining-card{
+    0%{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 1px 1px 5px 5px rgba(255, 255, 255, 0.5);
+
+    }
+    100%{
+        box-shadow: none;
+    }
+}
+
+@keyframes blinking-text{
+    0%{
+        opacity: 1;
+    }
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes trembling{
+    0%{
+        margin-left: initial;
+    }
+    50%{
+        margin-left: -5px;
+    }
+    100%{
+        margin-left: initial;
+    }
+}
+
+
+
+/* MEDIA QUERIES-------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 595px){
+    .title-album > *{
+        font-size: 1rem;
+    }
+    .title-song h6{
+        font-size: smaller;
+    }
+    #page-content{
+        margin-left: 100px;
+        padding-left: 100px;
+    }
+
+    .row.album{
+        pointer-events: none;
+    }
+
+    body, #spotify-side-nav{
+        margin-left: -200px;
+    }
+    footer{
+        margin-left: 200px;
+    }
+    #toggler-side-nav{
+        display: block;
+    }
+    .centered{
+        font-size: small;
+        white-space: nowrap;
+    }
+    #library-nav{
+        font-size: small;
+        white-space: nowrap;
+    }
+}
+@media only screen and (max-width: 1028px){
+    div.left{
+        display: none !important;
+    }
+    div.right{
+        display: none !important;
+    }
+    div.middle{
+        margin-left: 10rem !important;
+    }
+}
+@media only screen and (max-width: 796px){
+    div.middle{
+        margin-left: 3rem !important;
+    }
+}
+@media only screen and (max-width: 664px){
+    div.middle{
+        width: 25rem;
+    }
+}
+@media only screen and (max-width: 512px){
+    div.middle{
+        width: 19rem;
+    }
+}
