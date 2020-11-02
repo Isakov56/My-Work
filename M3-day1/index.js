@@ -152,30 +152,199 @@ const sum = function(x, y, z) {
 Create a function to test whether an array of integers of length 2 contains 1 or a 3. 
 */
 
+// const test = function(nums){
+//     if (nums.indexOf(1) == -1 && nums.indexOf(3) == -1) {
+//         return 'not contains'
+//     }
+
+//     else{
+//         return 'contains'
+//     }
+// }
+
+// console.log(test([3, 5]))
 /*
 10)
-Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
-11)
-Create a function to find the longest string from a given array of strings.
+Create a function to test whether an array of integers of length 2 does not contain 1 or a 3*/
+
+// const check = function (nums) {
+//     if (nums.includes(1) || nums.includes(3)){
+//         console.log('contains')
+//     }
+//     else{
+//         console.log('not contains')
+//     }
+// }
+
+// check([3, 5])
+
+/*11)
+Create a function to find the longest string from a given array of strings.*/
+
+// const findLongest = function(array1, array2){
+//     if (array1.length > array2.length){
+//         return 'first is longer'
+//     }
+//     else {
+//         return 'second one is longer'
+//     }
+// }
+
+//console.log(findLongest(['hallo', 'strive'], ['hallo',]))
+
+/*
 12)
 Create a function to find the types of a given angle.
 Types of angles:
     Acute angle: An angle between 0 and 90 degrees.
     Right angle: An 90 degree angle.
     btuse angle: An angle between 90 and 180 degrees.
-    Straight angle: A 180 degree angle.
+    Straight angle: A 180 degree angle.*/
+    
+
+    // const checkAngle = function(x){
+    //     let acute = []
+    //     for (let i = 0; i < 90; i++) {
+    //        acute.push(i)
+    //     }
+
+    //     let btuse = []
+    //     for (let i = 91; i < 180; i++) {
+    //        btuse.push(i)
+    //     }
+
+    //     if(acute.includes(x)){
+    //         return 'it is acute'
+    //     }
+    //     else if (x===90){
+    //         return 'it is right'
+    //     }
+    //     else if(btuse.includes(x)){
+    //         return 'it is btuse'
+    //     }
+    //     else if (x === 180){
+    //         return 'it is straight'
+    //     }
+    //     else{
+    //         return 'wrong angle'
+    //     }
+    // }
+
+    // console.log(checkAngle(90))
+
+
+
+
+/*
 13)
-Create a function to find the index of the greatest element of a given array of integers
+Create a function to find the index of the greatest element of a given array of integers*/
+// const findGreatest = function(nums){
+//     return Math.max(...nums)
+// }
+
+// console.log(findGreatest([1, 9, 3, 4]))
+
+
+
+
+/*
 14)
-Create a function to get the largest even number from an array of integers.
+Create a function to get the largest even number from an array of integers.*/
+
+
+// const largestEven = function(nums){
+//     let evenArray = []
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] % 2 === 0){
+//             evenArray.push(nums[i])
+//         }
+//     }
+//    return Math.max(...evenArray)
+// }
+// console.log(largestEven([1, 2, 3, 4, 5, 6, 7, 8, 37, 46]))
+
+
+/*
 15)
-Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
+Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.*/
+
+
+// const check = function(x, y){
+//     if (x===50 || y ===50 || (x+y)===50){
+//         return true
+//     }
+//     else{
+//         return false
+//     }
+// }
+// console.log(check(46, 4))
+
+/*
 16)
-Create a function to check from two given integers, whether one is positive and another one is negative.
+Create a function to check from two given integers, whether one is positive and another one is negative.*/
+
+
+// const check = function(x, y) {
+//     if (x<0 && y<0){
+//         return 'both of them are negative'
+//     }
+//     else if (x>0 && y >0){
+//         return 'both of them are positive'
+//     }
+//     else if (x> 0 && y <0 || x<0 && y>0){
+//         return 'one of them is positive but the other is negatve'
+//     }
+//     else {
+//         return 'both of them are negative'
+//     }
+// }
+
+// console.log(check(-1, -5))
+
+
+
+
+
+
+/*
 17)
-Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
+Create a function to create new string with first 3 characters are in lower case and the others in upper case. 
+If the string length is less than 3 convert all the characters in upper case.*/
+
+// const upperLower = function(string){
+//     let lower = string.slice(0, 3).toLowerCase()
+//     let upper = string.slice(3, string.length).toUpperCase()
+//     if (string.length <= 3){
+//         return string.toUpperCase()
+//     }
+//     else{
+//         return lower + upper
+//     }
+// }
+
+// console.log(upperLower('hal'))
+
+
+
+/*
 18)
-Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
+Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.*/
+
+// const returnRange = function(x, y){
+//     let sum = x + y
+//     if (50<sum && sum<80){
+//         return 65
+//     }
+//     else{
+//         return 80
+//     }
+// }
+
+// console.log(returnRange(60, -28))
+
+
+
+/*
 19)
 Create a function to convert a number to a string, the contents of which depend on the number's factors. Follow next example:
 If the number has 3 as a factor, output 'Diego'.
@@ -188,7 +357,54 @@ this would be a simple "Stefano".
 30's factors are 1, 2, 3, 5, 6, 10, 15, 30.
 this would be a "DiegoRiccardo".
 34 has four factors: 1, 2, 17, and 34.
-this would be "34".
+this would be "34".*/
+
+// const numberToString = function (x){
+
+    
+//     switch () {
+//         case (x % 3 === 0): 
+//         x = 'Diego'
+//         return x
+//         break;
+
+//         // case value:
+//         // break;
+        
+//         // case value:
+//         // break;
+
+//         // case value:
+//         // break;
+
+//         // case value:
+//         // break;
+
+//         // case value:
+//         // break;
+    
+//         default: 'wrong'
+//             break;
+//     }
+// }
+
+// console.log(numberToString(6))
+
+
+
+/*
 20)
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
 */
+
+const acronym = function(phrase){
+    let string = phrase.split(' ')
+    let empty =[]
+    for (let i = 0; i < string.length; i++) {
+        empty.push(string[i].slice(0, 1))
+    }
+    
+    return empty.join('').toUpperCase()
+}
+
+console.log(acronym('hello strive school'))
