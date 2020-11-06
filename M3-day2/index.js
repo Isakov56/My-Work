@@ -6,18 +6,26 @@ fetch("https://rapidapi.p.rapidapi.com/search?q=eminem", {
 	}
 })
 .then(response => response.json())
-.then(Image => console.log(Image.data[0].album.cover))
+.then(imageEminem => {
+    const imgJs = document.createElement('img')
+    imgJs.src = imageEminem.data[0].album.cover
+    console.log(imgJs)
+    const newJs = document.querySelector('.container')
+    newJs.appendChild(imgJs)   
+
+    
+})
+
 	
 .catch(err => {
 	console.error(err);
 });
-const hlJs = document.querySelector('.hl')
-console.log(hlJs)
-const imgJs = document.createElement('img')
-imgJs.src.innerText = 'Image'
-console.log(imgJs)
-const newJs = document.querySelector('.container')
-newJs.appendChild(imgJs)
+//imageEminem.data[0].album.cover
+//console.log(Image)
+//const hlJs = document.querySelector('.hl')
+//console.log(hlJs)
+
+
 //document.body.appendChild(imgJs)
 
 
