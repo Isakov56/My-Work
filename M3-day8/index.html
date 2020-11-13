@@ -29,12 +29,12 @@
       <h2 style="margin-left: 5rem;">Here some products</h2>
       <div class="container">
         <ul class="list-group">
-            <li class="list-group-item active d-flex justify-content-between ">
+            <li class="list-group-item active d-flex justify-content-between">
                 <p>Name</p>
-                <p>Description</p>
+                <!-- <p>Description</p> -->
                 <p>Brand</p>
                 <p>Price</p>
-                <p>Image</p>
+                <!-- <p>Image</p> -->
             </li>
         </ul>
       </div>
@@ -54,11 +54,12 @@
                 data.forEach(product => {
                     let list = document.createElement('li')
                     list.classList.add('list-group-item', 'd-flex', 'justify-content-between')
+                    list.addEventListener('click', function(){window.location.assign("detail.html?id=" + product._id)})
                     list.innerHTML = `<p>${product.name}</p>
-                    <p>${product.description}</sapn>
+                    <!-- <p>${product.description}</p> -->
                     <p>${product.brand}</p>
                     <p>${product.price}$</p>
-                    <img src="${product.imageUrl}" style="width:60px; height:70px;"/>`
+                    <!-- <img src="${product.imageUrl}" style="width:60px; height:70px;"/> -->`
                         ul.appendChild(list)
                 });
             }

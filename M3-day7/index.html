@@ -62,7 +62,7 @@
 
       <div class="input-group">
         <input type="text" class="form-control search" 
-        aria-label="Text input with dropdown button" onchange="test()">
+        aria-label="Text input with dropdown button" id="myInput" onkeyup="myFunction()">
         <div class="input-group-append">
           <button class="change btn btn-outline-secondary dropdown-toggle" type="button" 
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Method</button>
@@ -81,37 +81,34 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script>
       
-      const myUsers = async function () {
+      try{
+        const myUsers = async function () {
         const respons = await fetch(
           "https://jsonplaceholder.typicode.com/users"
         );
         const users = await respons.json();
+        //return users
         let tbody = document.querySelector("tbody");
         console.log(users)
         users.forEach((user) => {
           const tr = document.createElement("tr");
+          tr.id = 'myTr'
           tr.innerHTML = `<td>${user.id}</td>
                                     <td>${user.username}</td>
-                                    <td>${user.name}</td>
+                                    <td class="myNames">${user.name}</td>
                                     <td>${user.phone}</td>
                                     <td>${user.email}</td>
                                     <td>${user.website}</td>`;
           tbody.appendChild(tr);
-        });
-        buttonChanger()
-        
-        
-      };
-
-      const buttonChanger = () => {
+        })
+     
         let buttonChange = document.querySelector(".change");
         let dropdownMenu = document.querySelector(".dropdown-menu");
         let name = dropdownMenu.querySelector(".name");
         let username = dropdownMenu.querySelector('.username')
         let email = dropdownMenu.querySelector('.email')
         let search = document.querySelector('.search')
-        
-        // test()
+
         name.onclick = () => {
             buttonChange.innerText = name.innerText
         }
@@ -121,16 +118,39 @@
         email.onclick = () => {
             buttonChange.innerText = email.innerText
         }
+        
+
+        
+        
+        
       }
-
-      const test = () =>{
-            let input = document.querySelector('.search').value
-            console.log(input)
+      }
+      catch(error){console.log(error)}
+      const myFunction = () => {
+          let input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          tr = document.getElementById("myTr");
+          names = tr.getElementsByClassName("myNames");
+          for (i = 0; i < names.length; i++) {
+              a = names[i];
+              txtValue = a.textContent || a.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  names[i].style.display = "";
+              } else {
+                  names[i].style.display = "none";
+              }
+          }
         }
 
-        const searchHandler = () => {
-            console.log(users)
-        }
+      // const test = () =>{
+      //       let input = document.querySelector('.search').value
+      //       console.log(input)
+      //   }
+
+      //   const searchHandler = () => {
+      //       console.log(users)
+      //   }
 
       window.onload = () => {
           myUsers()
