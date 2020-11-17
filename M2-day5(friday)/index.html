@@ -18,13 +18,14 @@
             background-color: rgba(20, 20, 20, 1);
         }
         .netflix-logo {
-        height: 19px;
+        /* height: 19px; */
+        width: 7rem;
         position: relative;
         top: 2px;
          }
 
          .navEl a {
-             font-size: 0.7rem;
+             font-size: 1rem;
          }
          #bellIcon{
             height: 19px;
@@ -71,6 +72,10 @@
            border-radius: 5px;
            
            background-color: black;
+         }
+
+         .card-down {
+           color: white;
          }
 
          
@@ -151,10 +156,11 @@
   </nav>
       <div class="container-fluid">
         
-          <div class="row">
-              <div class="col"><h3 class="text-light">TV Shows</h4></div>
-              <div class="generes col">
-                <a class="nav-link dropdown-toggle text-light w-40" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="d-flex">
+              <div class=""><h3 class="text-light">TV Shows</h4></div>
+              <div class="generes ml-3" style="width: 7rem; height: 2.5rem; align-items: center !important;">
+                <a class="nav-link dropdown-toggle text-light w-40" href="#" id="navbarDropdown" 
+                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 0.35rem;">
                   Generes
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -177,9 +183,35 @@
       <!-- first row -->
       <h5 class="text-white">Trending Now</h5>
       <div class="row no-gutters flex-lg-nowrap mb-3">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-2 mr-2 mb-2">
-          <img class="img-fluid" src="img/01-1.jpg" alt="" />
-        </div>
+       
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2 mr-2 mb-2">
+             <div class="d-felx flex-column">
+              <div>
+                <img class="img-fluid" src="img/01-1.jpg" alt=""/>
+              </div>
+                <div class="card-down d-flex flex-column">
+              <p>Shooter</p>
+              <div d-flex flex-column>
+                <div class="d-flex flex-column">
+                  <div class="d-flex gener">
+                    <p>crime</p>
+                    <p>Sci-Fi</p>
+                    <p>Fantasy</p>
+                  </div>
+                  <div class="d-flex detail">
+                    <p>2016</p>
+                      <i class="far fa-star"></i>
+                      <p>8.5</p>
+                  </div>
+                </div>
+                <button class="btn btn-warning text-white">Watch now</button>
+              </div>
+            </div> -->
+          </div>
+            
+          </div>
+          
+        
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 mr-2 mb-2">
           <img class="img-fluid" src="img/01-2.jpg" alt="" />
         </div>
@@ -248,28 +280,29 @@
         <div class="row justify-content-center">
           <div class="col-3 first-list pl-0">
             <ul>
-              <li>
-                <a
+              <div class="d-flex mb-3">
+                <a class="mr-3"
                   href="https://www.facebook.com/netflixitalia/"
                   target="_blank"
-                  ><i class="fab fa-facebook fa-2x"></i
-                ></a>
-                <a
+                  >
+                  <i class="fab fa-facebook fa-2x"></i>
+              </a>
+                <a class="mr-3"
                   href="https://www.facebook.com/netflixitalia/"
-                  target="_blank"
-                  ><i class="fab fa-instagram fa-2x"></i
-                ></a>
-                <a
+                  target="_blank">
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a class="mr-3"
                   href="https://www.facebook.com/netflixitalia/"
-                  target="_blank"
-                  ><i class="fab fa-twitter fa-2x"></i
-                ></a>
-                <a
+                  target="_blank">
+                  <i class="fab fa-twitter fa-2x"></i>
+              </a>
+                <a class="mr-3"
                   href="https://www.facebook.com/netflixitalia/"
-                  target="_blank"
-                  ><i class="fab fa-youtube fa-2x"></i
-                ></a>
-              </li>
+                  target="_blank">
+                  <i class="fab fa-youtube fa-2x"></i>
+                </a>
+              </div>
               <li><a href="#">Audio and Subtitles</a></li>
               <li><a href="#">Media Center</a></li>
               <li><a href="#">Privacy</a></li>
