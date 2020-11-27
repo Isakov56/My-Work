@@ -1,0 +1,45 @@
+.main{
+    margin-top: 15rem;
+    margin-left: rem;
+    position: relative;
+
+  }
+  #artist-img{
+      width: 100%;
+      height: 70vh;
+      margin: auto;
+      position: absolute;
+  }
+
+  .main h5 {
+      text-align: center;
+      color: white;
+  }
+  .main h2 {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.main .container button {
+    width: 14rem; 
+    border-radius: 18px; 
+    margin: 0
+}
+.main .container button:nth-child(2) {
+    color: white; 
+    border: 1px solid white; 
+    background: transparent;
+}
+.main .container button:nth-child(2):hover {
+    background-color: rgba(255, 255, 255, 0.26);
+}
+
+.main .container .link {
+    margin: 3rem;
+    text-align: center;
+}
+.nav-link {
+   margin: auto;
+   
+}

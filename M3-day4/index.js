@@ -14,14 +14,17 @@ const changeHandler = (event) => {
     query = event.target.value.toLowerCase()
 }
 
-headers = new Headers ({
-    "x-rapidapi-key": "27306e4301msh978be9559c7efaap13b3d3jsn3fdc810abb52",
-	"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
-})
+// headers = new Headers ({
+//     "x-rapidapi-key": "27306e4301msh978be9559c7efaap13b3d3jsn3fdc810abb52",
+// 	"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
+// })
 const search = () =>{
-    fetch('https://deezerdevs-deezer.p.rapidapi.com/search?q=' + query, {
+    fetch('https://deezerdevs-deezer.p.rapidapi.com/search?q=' + "rihanna", {
     'method': 'GET',
-    headers
+    headers: {
+        "x-rapidapi-key": "27306e4301msh978be9559c7efaap13b3d3jsn3fdc810abb52",
+        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
+    }
   })
  .then((res) => {
      return res.json()
