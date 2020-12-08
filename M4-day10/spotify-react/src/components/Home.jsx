@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import './Home.css';
 import HomeNavBar from "./HomeNavBar"
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 class Home extends React.Component {
     //  changeHandler = (event) => {
     //     query = event.target.value.toLowerCase()
@@ -23,7 +23,7 @@ class Home extends React.Component {
          return res.json()
      })
      .then((songs) => {
-         console.log(songs)
+         console.log("this my somgs array", songs)
          this.props.parentCallback(songs.data);
         this.setState({
             mySongs: songs.data
@@ -67,4 +67,4 @@ class Home extends React.Component {
         )
     }
 }
-export default Home
+export default withRouter(Home)

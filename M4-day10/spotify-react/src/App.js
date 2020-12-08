@@ -21,10 +21,10 @@ class App extends React.Component {
           <div className="App d-flex">
             <Router>
               <SideBar />
-              <Route path="/" exact render={(props) => (<Home parentCallback = {this.handleCallback}/>)} />
-              <Route path="/album" exact render={(props) => (<Album data={this.state.searchQuery}/>)} />
+              <Route path="/" exact render={(props) => (<Home {...props} parentCallback = {this.handleCallback}/>)} />
+              <Route path="/album" exact render={(props) => (<Album {...props} data={this.state.searchQuery}/>)} />
             </Router>
-            {/* {console.log(this.state.searchQuery)} */}
+            {console.log("this is my data", this.state.searchQuery)}
           </div>
       )
   }

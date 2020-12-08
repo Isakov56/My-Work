@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { Link } from 'react-router-dom'
 import "./Album.css"
-
 class Album extends React.Component {
     render(){
-        console.log(this.props.data)
+        console.log("this is my data in Album", this.props.data)
+        console.log("This are my extended props", this.props)
+        // this.props.history.push("/album"+)
         return(
             <>
             <div className="d=flex">
@@ -16,7 +17,7 @@ class Album extends React.Component {
                     <Row>
                         <Col>
                             <h5 className="">Monthly listeners</h5>
-                            <h2 >Eminem</h2>
+                            {/* <h2 >{this.props.data.}</h2> */}
                             <Container>
                                 <Row className="d-flex justify-content-center">
                                     <Button className="success mr-1" style={{}}>Play</Button>
@@ -34,17 +35,20 @@ class Album extends React.Component {
                     </Row>
                 </Container>
                 <Container>
-                {/* {this.props.data.map((song) => (
-                    <Col 
-                    xs={6}
-                    md={3}
-                    lg={2}>
-                    <img className="img-fluid" src={song.album.cover} style={{width:"10rem", height:"12rem"}}/>
-                    <p style={{color:"white"}}>
-                     {song.album.title}
-                    </p>
-                    </Col>
-                ))} */}
+                    <Row>
+                        {this.props.data.map((song) => (
+                            <Col 
+                            xs={6}
+                            md={3}
+                            lg={2}>
+                            <img className="img-fluid" src={song.album.cover} style={{width:"10rem", height:"12rem"}}/>
+                            <p style={{color:"white"}}>
+                            {song.album.title}
+                            </p>
+                            </Col>
+                        ))}
+                    </Row>
+                
                 </Container>
             </div>
                 
