@@ -1,13 +1,15 @@
 const express = require("express")
 const fs = require("fs")
-const { userInfo } = require("os")
 const path = require("path")
 const uniqid = require("uniqid")
+const { readDB, writeDB } = require("../library/utilities")
 
 const { check, validationResult } = require("express-validator")
 const { send } = require("process")
 
 const router =  express.Router()
+
+const filePathS = path.join(__dirname, "students.json")
 
 const readFile = (fileName) => {
     const buffer =fs.readFileSync(path.join(__dirname, fileName))
@@ -15,9 +17,9 @@ const readFile = (fileName) => {
     return JSON.parse(fileContent)
 }
 
-router.get("/", (req, res, next) => {
+router.get("/", async (req, res, next) => {
     try{
-        const studentsDB = readFile("students.json")
+        const studentsDB = await readDB(filePathS)
         if(req.query && req.query.name){
             const filteredStudents = studentsDB.filter(student => {
                 student.hasOwnProperty("name") &&
@@ -30,9 +32,9 @@ router.get("/", (req, res, next) => {
     }catch(error){next(error)}
 })
 
-router.get("/:id", (req, res, next) => {
+router.get("/:id", async (req, res, next) => {
     try{
-        const studentsDB= readFile("students.json")
+        const studentsDB = await readDB(filePathS)
         const student = studentsDB.filter(student => student.ID === req.params.id)
         if(student.length > 0){
             res.send(student)
@@ -48,7 +50,7 @@ router.get("/:id", (req, res, next) => {
 
 router.post("/",
 [ check("name").isLength({ min: 3}).withMessage("Damn! Name too short").exists().withMessage("Name is required!")], 
-(req, res, next) => {
+async (req, res, next) => {
     try{
         const errors = validationResult(req)
         if(!errors.isEmpty()){
@@ -57,14 +59,15 @@ router.post("/",
             err.httpStatusCode = 400
             next(err)
         }else{
-            const studentsDB = readFile("students.json")
+            const studentsDB = await readDB(filePathS)
             const newStudent = {
                 ...req.body,
                 ID: uniqid(),
                 modifiedAt: new Date()
             }
             studentsDB.push(newStudent)
-            fs.writeFileSync(path.join(__dirname, "students.json"), JSON.stringify(studentsDB))
+            // fs.writeFileSync(path.join(__dirname, "students.json"), JSON.stringify(studentsDB))
+            await writeDB(filePathS, studentsDB)
             res.status(201).send({id: newStudent.ID})
         }
     }catch(error){next(error)}
@@ -72,9 +75,9 @@ router.post("/",
 
 })
 
-router.put("/:id", (req, res, next) => {
+router.put("/:id", async (req, res, next) => {
     try {
-      const studentsDB = readFile("students.json")
+      const studentsDB = await readDB(filePathS)
       const newDb = studentsDB.filter(student => student.ID !== req.params.id)
   
       const modifiedStudent = {
@@ -84,20 +87,19 @@ router.put("/:id", (req, res, next) => {
       }
   
       newDb.push(modifiedStudent)
-      fs.writeFileSync(path.join(__dirname, "students.json"), JSON.stringify(newDb))
-  
+      await writeDB(filePathS, newDb)
       res.send({ id: modifiedStudent.ID })
     } catch (error) {
       next(error)
     }
   })
 
-router.delete("/:id", (req, res, next) => {
+router.delete("/:id", async (req, res, next) => {
     try{
         if(req.params.id > 0){
-            const studentsDB = readFile("students.json")
+            const studentsDB = await readDB(filePathS)
             const newDB = studentsDB.filter(students => students.ID !== req.params.id)
-            fs.writeFileSync(path.join(__dirname, "students.json"), JSON.stringify(newDB))
+            await writeDB(filePathS, newDB)
             res.status(204).send()
         }else{
             const err = new Error()
