@@ -1,0 +1,62 @@
+[
+  {
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+    "Title": "Harry Potter and the Deathly Hallows: Part 2",
+    "Type": "movie",
+    "Year": "2011",
+    "createdAt": "2020-12-18T13:35:44.387Z",
+    "updatedAt": "2020-12-18T13:35:44.387Z",
+    "_id": "eot1as0kiubff2c",
+    "reviews": []
+  },
+  {
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg",
+    "Title": "Harry Potter and the Sorcerer's Stone",
+    "Type": "movie",
+    "Year": "2001",
+    "createdAt": "2020-12-18T13:36:58.171Z",
+    "updatedAt": "2020-12-18T13:36:58.171Z",
+    "_id": "eot1kaskiubgzzw",
+    "reviews": []
+  },
+  {
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTcxODgwMDkxNV5BMl5BanBnXkFtZTYwMDk2MDg3._V1_SX300.jpg",
+    "Title": "Harry Potter and the Chamber of Secrets",
+    "Type": "movie",
+    "Year": "2002",
+    "createdAt": "2020-12-18T13:38:32.802Z",
+    "updatedAt": "2020-12-18T13:38:32.802Z",
+    "_id": "eot1aqckiubj10j",
+    "reviews": []
+  },
+  {
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTY4NTIwODg0N15BMl5BanBnXkFtZTcwOTc0MjEzMw@@._V1_SX300.jpg",
+    "Title": "Harry Potter and the Prisoner of Azkaban",
+    "Type": "movie",
+    "Year": "2004",
+    "createdAt": "2020-12-18T13:40:20.495Z",
+    "updatedAt": "2020-12-18T13:40:20.495Z",
+    "_id": "eot1ifckiublc40",
+    "reviews": []
+  },
+  {
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTI1NDMyMjExOF5BMl5BanBnXkFtZTcwOTc4MjQzMQ@@._V1_SX300.jpg",
+    "Title": "Harry Potter and the Goblet of Fire",
+    "Type": "movie",
+    "Year": "2005",
+    "createdAt": "2020-12-18T13:41:09.774Z",
+    "updatedAt": "2020-12-18T13:41:09.774Z",
+    "_id": "eot134wkiubme4v",
+    "reviews": []
+  },
+  {
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTM0NTczMTUzOV5BMl5BanBnXkFtZTYwMzIxNTg3._V1_SX300.jpg",
+    "Title": "Harry Potter and the Order of the Phoenix",
+    "Type": "movie",
+    "Year": "2007",
+    "createdAt": "2020-12-18T13:42:09.906Z",
+    "updatedAt": "2020-12-18T13:42:09.906Z",
+    "_id": "eot1gqgkiubnoj7",
+    "reviews": []
+  }
+]
